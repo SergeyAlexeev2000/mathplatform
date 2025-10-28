@@ -1,0 +1,11 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "stop-servers",
+      "type": "shell",
+      "command": "taskkill /IM python.exe /F",
+      "problemMatcher": []
+    }
+  ]
+}

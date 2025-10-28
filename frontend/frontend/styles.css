@@ -1,0 +1,26 @@
+:root { --bg:#0b0e11; --card:#10151b; --muted:#c7d1da; --accent:#66ccff; --accent2:#a4ff4f; --danger:#ff6b6b; }
+*{ box-sizing:border-box } body{ margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif; background:linear-gradient(180deg,#0b0e11,#0a0f14); color:#fff }
+.topbar{ display:flex; align-items:center; gap:12px; padding:12px 16px; border-bottom:1px solid #1a2230; background:#0c1016; position:sticky; top:0 }
+.logo{ font-weight:800; letter-spacing:.5px } .spacer{ flex:1 }
+.lang select{ background:#0f141b; color:#fff; border:1px solid #1a2230; padding:6px 8px; border-radius:8px }
+.auth .btn{ margin-left:8px }
+.hero{ display:grid; place-items:center; min-height:calc(100vh - 64px); padding:24px }
+.hero-card{ width:min(880px,96%); background:radial-gradient(circle at 20% -20%, rgba(102,204,255,.15), transparent 30%), #0c1117; border:1px solid #1a2230; border-radius:16px; padding:28px; box-shadow:0 12px 40px rgba(0,0,0,.35); text-align:center }
+.hero-card h1{ font-size:clamp(28px,4vw,44px); margin:0 0 12px }
+.hero-card p{ color:var(--muted) }
+.cta{ display:flex; justify-content:center; gap:12px; margin:18px 0 }
+.contact{ margin-top:18px; color:var(--muted) }
+.btn{ background:var(--accent); color:#001018; border:none; padding:10px 16px; border-radius:12px; font-weight:700; cursor:pointer; transition:.2s }
+.btn:hover{ filter:brightness(1.05); transform:translateY(-1px) }
+.btn.ghost{ background:transparent; color:var(--accent); border:1px solid var(--accent) }
+.btn.primary{ background:linear-gradient(90deg,var(--accent),var(--accent2)) }
+.modal::backdrop{ background:rgba(0,0,0,.6) }
+.modal .card{ width:min(520px,95vw); background:var(--card); padding:20px; border:1px solid #1a2230; border-radius:14px }
+.card h3{ margin-top:0 } .card label{ display:block; margin:10px 0; text-align:left }
+.card input{ width:100%; padding:10px 12px; border-radius:10px; border:1px solid #293345; background:#0f141b; color:#fff }
+.row{ display:flex; gap:12px; align-items:center } .error{ color:var(--danger) }
+.verify.ok{ margin-top:10px; color:#9dff7a; display:flex; gap:8px; align-items:center } .verify.ok .check{ font-weight:900 }
+.captcha{ margin:8px 0 12px; padding:16px; text-align:center; border:1px dashed #2a3648; border-radius:10px; color:#7c8b9b }
+.confirm{ margin-top:18px; padding:18px; border:1px dashed #2a3648; background:#0c1219; border-radius:12px }
+.hidden{ display:none } .remember{ display:flex; gap:8px; align-items:center; margin:8px 0; justify-content:center }
+.login{ display:grid; place-items:center; padding:24px } .login .card{ width:min(440px,95vw); background:var(--card); padding:20px; border:1px solid #1a2230; border-radius:14px }

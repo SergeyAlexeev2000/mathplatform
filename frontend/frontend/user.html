@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>HM — User</title>
+  <link rel="stylesheet" href="user.css"/>
+</head>
+<body>
+<header class="topbar">
+  <button id="menu" title="Options">☰</button>
+  <div class="title">Highest Math — Portal</div>
+  <div class="spacer"></div>
+  <input id="search" placeholder="Search on page"/>
+  <button id="market">🛒</button>
+</header>
+
+<aside id="drawer" class="drawer hidden">
+  <div class="hello">
+    <div class="dot"></div>
+    <div>
+      <div class="greet">Hi, <span id="hello-name">guest</span>, welcome back.</div>
+      <small class="muted">Status: <span id="hello-status">offline</span></small>
+    </div>
+  </div>
+  <nav>
+    <button class="navitem" data-target="learning">My learning</button>
+    <button class="navitem" data-target="research">My research</button>
+    <button class="navitem" data-target="downloads">Downloads</button>
+    <button class="navitem" data-target="timetable">Timetable</button>
+    <button class="navitem" data-target="certs">Certifications</button>
+    <button class="navitem" data-target="popular">Most popular</button>
+    <button class="navitem" data-target="settings">Settings</button>
+  </nav>
+</aside>
+
+<main id="content">
+  <!-- Registration & Login card -->
+  <section id="auth-card" class="card">
+    <h2>Create your account</h2>
+    <div class="grid">
+      <label>Email/phone</label>
+      <input id="reg-email" placeholder="you@example.com" type="text"/>
+
+      <label>Username</label>
+      <input id="reg-username" placeholder="your nickname" type="text"/>
+
+      <label>Password</label>
+      <input id="reg-password" placeholder="••••••••" type="password"/>
+    </div>
+    <div class="row">
+      <button id="btn-register" class="primary">Register</button>
+      <span id="reg-status" class="status"></span>
+    </div>
+
+    <hr/>
+
+    <h3>Log in</h3>
+    <div class="grid">
+      <label>Email or username</label>
+      <input id="login-id" placeholder="email or username" type="text"/>
+
+      <label>Password</label>
+      <input id="login-password" placeholder="••••••••" type="password"/>
+
+      <label class="check"><input id="remember" type="checkbox"/> Remember me</label>
+    </div>
+    <div class="row">
+      <button id="btn-login" class="primary">Log in</button>
+      <span id="login-status" class="status"></span>
+    </div>
+
+    <div id="post-register" class="confirm hidden">
+      <p>Verification passed successfully ✓</p>
+      <button id="confirm" class="accent">Confirm</button>
+    </div>
+  </section>
+
+  <!-- Account area -->
+  <section id="account" class="hidden">
+    <div class="headerline">
+      <div class="hello2">Welcome, <span id="user-name"></span></div>
+      <button id="calendar">📅</button>
+    </div>
+
+    <div class="quick">
+      <button id="btn-disciplines">My disciplines</button>
+      <button id="btn-tracks">My tracks</button>
+      <button id="btn-courses">My courses</button>
+      <button id="btn-wishlist">My wishlist</button>
+    </div>
+
+    <h3>Recently visited</h3>
+    <ul id="recent-list" class="list"></ul>
+
+    <h3>What to learn next</h3>
+    <ul id="suggest-list" class="list"></ul>
+
+    <div class="cta-row">
+      <button id="become-teacher" class="accent">Become our teacher</button>
+      <button id="become-partner" class="accent">Become our partner</button>
+      <button id="logout" class="ghost">Log out</button>
+    </div>
+  </section>
+</main>
+
+<script src="user.js"></script>
+</body>
+</html>

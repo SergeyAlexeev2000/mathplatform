@@ -1,0 +1,43 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run FastAPI backend",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": ["main:app", "--reload", "--port", "8000"],
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "serverReadyAction": {
+        "pattern": "Uvicorn running on (http://\\S+)",
+        "uriFormat": "%s/docs",
+        "action": "openExternally"
+      }
+    },
+    {
+      "name": "Run Frontend (static server)",
+      "type": "python",
+      "request": "launch",
+      "module": "http.server",
+      "args": ["5173", "--directory", "frontend"],
+      "console": "integratedTerminal",
+      "serverReadyAction": {
+        "pattern": "Serving HTTP on .*? port 5173",
+        "uri": "http://localhost:5173",
+        "action": "openExternally"
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Run Full Platform",
+      "configurations": [
+        "Run FastAPI backend",
+        "Run Frontend (static server)"
+      ],
+      "stopAll": true,
+      "postDebugTask": "stop-servers"
+    }
+  ]
+}
